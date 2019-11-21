@@ -77,7 +77,6 @@ public class LGGestureService extends Service {
         return (Settings.Secure.getInt(mContext.getContentResolver(),
                     Settings.Secure.DOUBLE_TAP_TO_WAKE, 0) != 0);
     }
-    }
 
     private boolean writeLPWG(boolean state) {
         if (DEBUG) Log.d(TAG, "Writing to lpwg_notify");
