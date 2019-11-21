@@ -74,7 +74,9 @@ public class LGGestureService extends Service {
     }
 
     private boolean isDoubleTapEnabled() {
-        return true);
+        return (Settings.Secure.getInt(mContext.getContentResolver(),
+                    Settings.Secure.DOUBLE_TAP_TO_WAKE, 0) != 0);
+    }
     }
 
     private boolean writeLPWG(boolean state) {
